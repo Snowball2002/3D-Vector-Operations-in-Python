@@ -1,0 +1,36 @@
+# This is a sample Python script.
+
+# Press Shift+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+class Vector:
+	def __init__(self, xcoord, ycoord, zcoord): #Creates a vector
+		self.x = xcoord
+		self.y = ycoord
+		self.z = zcoord
+
+	def add(self, v): #Adds two vectors
+		x = self.x + v.x
+		y = self.y + v.y
+		z = self.z + v.z
+		return Vector(x, y, z)
+
+	def dotProduct(self, v): #Returns the dot product of two vectors
+		return self.x * v.x + self.y * v.y + self.z * v.z
+
+#Tests the program
+v1 = Vector(1,1,1)
+v2 = Vector(2,3,1)
+print(v1.add(v2))
+print(v1.dotProduct(v2))
